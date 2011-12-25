@@ -15,7 +15,7 @@ DESCRIPTION
 		 # yum install glib2-devel
 		 # yum install glibc-devel
 
-		 $ git clone github.com/mohan43u/pcapstreamer
+		 $ git clone git://github.com/mohan43u/pcapstreamer.git
 		 $ cd pcapstreamer
 		 $ make
 		 # ./pcapstreamer
