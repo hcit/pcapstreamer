@@ -6,9 +6,6 @@
 #include <glib.h>
 #include <pcap/pcap.h>
 #include <sys/time.h>
-#include <string.h>
-#include <signal.h>
-#include <errno.h>
 
 #define PACKET_LENGTH 65535
 #define PACKET_TIMEOUT 1000
