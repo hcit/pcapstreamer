@@ -10,7 +10,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_PROG_CC
 
 # Add libraries using pkg-config
-PKG_CHECK_MODULES([PKGCFG], [glib-2.0 gthread-2.0], [],[])
+PKG_CHECK_MODULES([PKGCFG], [glib-2.0], [],[])
 
 # Add libraries using pcap-config
 PCAPCFG_CFLAGS=$(pcap-config --cflags)
