@@ -400,6 +400,9 @@ uninstall-man: uninstall-man1
 	uninstall-am uninstall-man uninstall-man1
 
 
+pcapstreamer.1: pcapstreamer.1.xml
+	xmlto man pcapstreamer.1.xml
+
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:

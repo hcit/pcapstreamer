@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
+
+<refentry>
+  <refentryinfo>
+    <productname class="service">pcapstreamer</productname>
+    <author>
+      <personname>
+	<firstname>Mohan</firstname>
+	<surname>Raman</surname>
+      </personname>
+      <personblurb>
+      <para>http://mohan43u.wordpress.com</para>
+      </personblurb>
+      <email>mohan43u@gmail.com</email>
+    </author>
+  </refentryinfo>
+
+  <refmeta>
+    <refentrytitle>pcapstreamer</refentrytitle>
+    <manvolnum>1</manvolnum>
+    <refmiscinfo class="sectdesc">User Commands</refmiscinfo>
+  </refmeta>
+
+  <refnamediv>
+    <refname>pcapstreamer</refname>
+    <refpurpose>packet dumber and parser</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <cmdsynopsis>
+      <command>pcapstreamer</command>
+      <arg choice="req">-l|--listdevices</arg>
+      <arg choice="req">-i|--interface name|default|NULL|null</arg>
+      <arg choice="opt">-p|--parse</arg>
+      <arg choice="opt">-h|--help</arg>
+      <arg choice="opt" rep="repeat">pcap_expression</arg>
+    </cmdsynopsis>
+  </refsynopsisdiv>
+
+  <refsect1>
+    <title>Description</title>
+    <para>Blah!! Blah!!</para>
+  </refsect1>
+</refentry>

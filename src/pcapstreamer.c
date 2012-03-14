@@ -33,10 +33,9 @@ static void ps_getopt(int argc, char *argv[], GHashTable *arguments)
 {
   gchar opt = '\0';
   gchar usage[] = "[usage] pcapstreamer "
-    "[-l|--listdevices] "
-    "[-i|--interface name|default|NULL] "
-    "[-p|--parse]"
-    "[-h|--help] -- pcap_expression1 pcap_expression2 ..]\n";
+    "{-l|--listdevices} | {-i|--interface name|default|NULL|null} "
+    "[-p|--parse] "
+    "[-h|--help] [pcap_expression..]\n";
   struct option longopts[] = {{"listdevices", 0, NULL, 'l'},
 			      {"interface", 1, NULL, 'i'},
 			      {"parse", 0, NULL, 'p'},
