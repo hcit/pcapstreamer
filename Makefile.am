@@ -1,3 +1,4 @@
 # recursive make to generate iprocess
 
-SUBDIRS = src doc
+SUBDIRS = src
+DIST_SUBDIRS = man
