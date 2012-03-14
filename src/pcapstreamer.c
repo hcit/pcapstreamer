@@ -33,10 +33,10 @@ static void ps_getopt(int argc, char *argv[], GHashTable *arguments)
 {
   gchar opt = '\0';
   gchar usage[] = "[usage] pcapstreamer "
-    "{-l|--listdevices} | {-i|--interface name|default|NULL|null} "
+    "{-l|--listinterfaces} | {-i|--interface name|default|NULL|null} "
     "[-p|--parse] "
     "[-h|--help] [pcap_expression..]\n";
-  struct option longopts[] = {{"listdevices", 0, NULL, 'l'},
+  struct option longopts[] = {{"listinterfaces", 0, NULL, 'l'},
 			      {"interface", 1, NULL, 'i'},
 			      {"parse", 0, NULL, 'p'},
 			      {"help", 0, NULL, 'h'}};
@@ -54,7 +54,7 @@ static void ps_getopt(int argc, char *argv[], GHashTable *arguments)
 	{
 	case 'l':
 	  {
-	    g_hash_table_insert(arguments, "listdevices", "1");
+	    g_hash_table_insert(arguments, "listinterfaces", "1");
 	  }
 	  break;
 	case 'i':
@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
   gchar *pcapexp = NULL;
 
   ps_getopt(argc, argv, arguments);
-  if(g_strcmp0(g_hash_table_lookup(arguments, "listdevices"), "1") == 0)
+  if(g_strcmp0(g_hash_table_lookup(arguments, "listinterfaces"), "1") == 0)
     {
       ps_list_interfaces();
       exit(EXIT_SUCCESS);

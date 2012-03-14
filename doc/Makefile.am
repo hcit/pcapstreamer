@@ -1,6 +1,9 @@
 # makefile to dist manpage
 
-man_MANS = pcapstreamer.1
+man_MANS = pcapstreamer.8
 
-pcapstreamer.1: pcapstreamer.1.xml
-	xmlto man pcapstreamer.1.xml
+pcapstreamer.8: pcapstreamer.8.xml
+	xmlto man pcapstreamer.8.xml
+
+clean-local:
+	rm -fr pcapstreamer.8

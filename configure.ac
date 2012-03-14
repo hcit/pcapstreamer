@@ -13,6 +13,9 @@ AC_PROG_CC
 PKG_CHECK_MODULES([PKGCFG], [glib-2.0], [],[])
 
 # Add libraries using pcap-config
+if ! (which pcap-config); then
+   AC_MSG_ERROR([did you install libpcap? (http://www.tcpdump.org)], [1])
+fi
 PCAPCFG_CFLAGS=$(pcap-config --cflags)
 PCAPCFG_LIBS=$(pcap-config --libs)
 AC_SUBST(PCAPCFG_CFLAGS, $PCAPCFG_CFLAGS)
@@ -25,6 +28,11 @@ AC_CHECK_HEADERS([stdlib.h errno.h string.h unistd.h getopt.h signal.h netinet/i
 
 # Checks for library functions.
 AC_CHECK_FUNCS([memset])
+
+# Check xmlto for documentation
+if ! (which xmlto); then
+   AC_MSG_ERROR([did you install xmlto? (https://fedorahosted.org/xmlto/)], [1])
+fi
 
 AC_CONFIG_FILES([Makefile
                  doc/Makefile

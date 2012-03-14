@@ -18,8 +18,8 @@
 
   <refmeta>
     <refentrytitle>pcapstreamer</refentrytitle>
-    <manvolnum>1</manvolnum>
-    <refmiscinfo class="sectdesc">User Commands</refmiscinfo>
+    <manvolnum>8</manvolnum>
+    <refmiscinfo class="sectdesc">Reference</refmiscinfo>
   </refmeta>
 
   <refnamediv>
@@ -30,11 +30,15 @@
   <refsynopsisdiv>
     <cmdsynopsis>
       <command>pcapstreamer</command>
-      <arg choice="req">-l|--listdevices</arg>
+      <arg choice="req">-l|--listinterfaces</arg>
       <arg choice="req">-i|--interface name|default|NULL|null</arg>
       <arg choice="opt">-p|--parse</arg>
-      <arg choice="opt">-h|--help</arg>
       <arg choice="opt" rep="repeat">pcap_expression</arg>
+    </cmdsynopsis>
+
+    <cmdsynopsis>
+      <command>pcapstreamer</command>
+      <arg choice="opt">-h|--help</arg>
     </cmdsynopsis>
   </refsynopsisdiv>
 
