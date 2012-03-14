@@ -27,6 +27,6 @@ AC_CHECK_HEADERS([stdlib.h errno.h string.h unistd.h getopt.h signal.h netinet/i
 AC_CHECK_FUNCS([memset])
 
 AC_CONFIG_FILES([Makefile
-                 man/Makefile
+                 doc/Makefile
                  src/Makefile])
 AC_OUTPUT
