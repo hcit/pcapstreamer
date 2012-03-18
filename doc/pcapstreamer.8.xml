@@ -10,7 +10,7 @@
 	<surname>Raman</surname>
       </personname>
       <personblurb>
-      <para>http://mohan43u.wordpress.com</para>
+	<para>http://mohan43u.wordpress.com</para>
       </personblurb>
       <email>mohan43u@gmail.com</email>
     </author>
@@ -30,8 +30,8 @@
   <refsynopsisdiv>
     <cmdsynopsis>
       <command>pcapstreamer</command>
-      <arg choice="req"><replaceable>-l|--listinterfaces</replaceable></arg>
-      <arg choice="req"><replaceable>-i|--interface name|default|null</replaceable></arg>
+      <arg choice="req">-l|--listinterfaces</arg>
+      <arg choice="req">-i|--interface name|default|null</arg>
       <arg choice="opt">-p|--parse</arg>
       <arg choice="opt" rep="repeat">pcap_expression</arg>
     </cmdsynopsis>
@@ -67,11 +67,11 @@
 	<listitem>
 	  <para><emphasis>name</emphasis> must be an interface name resulted
 	  from --listinterfaces. This will set the interface to capture. Packets
-	  will be retrived going through this interface.We can use <emphasis>default</emphasis> to
-	  capture packets from default interface determined by libpcap or we can
-	  use <emphasis>null</emphasis> to capture from linux's pseudo interface. We must
-	  provide an interface to <emphasis>pcapstreamer</emphasis> to capture packets. Press
-	  ctrl-c to stop capturing packets.</para>
+	  will be retrived going through this interface.We can use
+	  <emphasis>default</emphasis> to capture packets from default interface determined
+	  by libpcap or we can use <emphasis>null</emphasis> to capture from linux's pseudo
+	  interface. We must provide an interface to <emphasis>pcapstreamer</emphasis> to
+	  capture packets. Press ctrl-c to stop capturing packets.</para>
 	</listitem>
       </varlistentry>
 
@@ -106,8 +106,8 @@
       <para>Following command will list all interfaces available for capturing.
       <screen><command>pcapstreamer -l</command></screen></para>
 
-      <para>Following command will capture packets going through <emphasis>lo</emphasis> interace.
-      <screen><command>pcapstreamer -i lo</command></screen></para>
+      <para>Following command will capture packets going through <emphasis>lo</emphasis>
+      interace.<screen><command>pcapstreamer -i lo</command></screen></para>
 
       <para>Following command will capture packets going through Linux's pseudo interface
       with parsing enabled.<screen><command>pcapstreamer -i null -p</command></screen></para>
