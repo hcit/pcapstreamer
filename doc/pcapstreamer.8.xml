@@ -30,15 +30,15 @@
   <refsynopsisdiv>
     <cmdsynopsis>
       <command>pcapstreamer</command>
-      <arg choice="req">-l|--listinterfaces</arg>
-      <arg choice="req">-i|--interface name|default|null</arg>
-      <arg choice="opt">-p|--parse</arg>
-      <arg choice="opt" rep="repeat">pcap_expression</arg>
+      <arg choice="req"><option>-l|--listinterfaces</option></arg>
+      <arg choice="req"><option>-i|--interface name|default|null</option></arg>
+      <arg choice="opt"><option>-p|--parse</option></arg>
+      <arg choice="opt" rep="repeat"><option>pcap_expression</option></arg>
     </cmdsynopsis>
 
     <cmdsynopsis>
       <command>pcapstreamer</command>
-      <arg choice="opt">-h|--help</arg>
+      <arg choice="opt"><option>-h|--help</option></arg>
     </cmdsynopsis>
   </refsynopsisdiv>
 
