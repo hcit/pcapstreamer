@@ -1,0 +1,127 @@
+'\" t
+.\"     Title: pcapstreamer
+.\"    Author: Mohan Raman <mohan43u@gmail.com>
+.\" Generator: DocBook XSL Stylesheets v1.76.1 <http://docbook.sf.net/>
+.\"      Date: 05/03/2012
+.\"    Manual: Reference
+.\"    Source: pcapstreamer 0.2
+.\"  Language: English
+.\"
+.TH "PCAPSTREAMER" "8" "05/03/2012" "pcapstreamer 0.2" "Reference"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+pcapstreamer \- packet dumber and parser
+.SH "SYNOPSIS"
+.HP \w'\fBpcapstreamer\fR\ 'u
+\fBpcapstreamer\fR {\fB\-l|\-\-listinterfaces\fR} {\fB\-i|\-\-interface\ name|default|null\fR} [\fB\-p|\-\-parse\fR] [\fBpcap_expression\fR...]
+.HP \w'\fBpcapstreamer\fR\ 'u
+\fBpcapstreamer\fR [\fB\-h|\-\-help\fR]
+.SH "DESCRIPTION"
+.PP
+pcapstreamer is a network packet dumper and parser which uses libpcap to capture packets\&.
+.SH "OPTIONS"
+.PP
+\fB\-l|\-\-listinterfaces\fR
+.RS 4
+list all interfaces available for packet capture\&. If you do not get any interface, probably you do not have permission to capture\&. You need to be
+\fIroot\fR
+to capture packets\&.
+.RE
+.PP
+\fB\-i|\-\-interface\fR
+.RS 4
+\fIname\fR
+must be an interface name resulted from \-\-listinterfaces\&. This will set the interface to capture\&. Packets will be retrived going through this interface\&.We can use
+\fIdefault\fR
+to capture packets from default interface determined by libpcap or we can use
+\fInull\fR
+to capture from linux\*(Aqs pseudo interface\&. We must provide an interface to
+\fIpcapstreamer\fR
+to capture packets\&. Press ctrl\-c to stop capturing packets\&.
+.RE
+.PP
+\fB\-p|\-\-parse\fR
+.RS 4
+This option will try to parse the packet captured by libpcap\&. Header fields will be seperated by comma\&. By default
+\fIpcapstreamer\fR
+will dump packets in binary strings\&.
+.RE
+.PP
+\fB\-h|\-\-help\fR
+.RS 4
+This option will display short
+\fIusage\fR\&.
+.RE
+.PP
+\fBpcap_expression\fR
+.RS 4
+libpcap expression to filter packets during capture time\&. See
+\fIpcap\-filter(7)\fR
+for more details\&.
+.RE
+.SH "EXAMPLES"
+.PP
+Following command will list all interfaces available for capturing\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\fBpcapstreamer \-l\fR
+.fi
+.if n \{\
+.RE
+.\}
+.PP
+Following command will capture packets going through
+\fIlo\fR
+interace\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\fBpcapstreamer \-i lo\fR
+.fi
+.if n \{\
+.RE
+.\}
+.PP
+Following command will capture packets going through Linux\*(Aqs pseudo interface with parsing enabled\&.
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+\fBpcapstreamer \-i null \-p\fR
+.fi
+.if n \{\
+.RE
+.\}
+.SH "SEE ALSO"
+.PP
+tcpdump(8),pcap(3),pcap\-filter(7)
+.SH "AUTHOR"
+.PP
+\fBMohan Raman\fR <\&mohan43u@gmail\&.com\&>
+.RS 4
+http://mohan43u\&.wordpress\&.com
+.RE
