@@ -4278,9 +4278,9 @@ done
 
 
 # Check xmlto for documentation
-if ! (which xmlto); then
-   as_fn_error 1 "did you install xmlto? (https://fedorahosted.org/xmlto/)" "$LINENO" 5
-fi
+# if ! (which xmlto); then
+#   AC_MSG_ERROR([did you install xmlto? (https://fedorahosted.org/xmlto/)], [1])
+# fi
 
 ac_config_files="$ac_config_files Makefile doc/Makefile src/Makefile"
 

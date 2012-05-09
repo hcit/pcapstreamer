@@ -30,9 +30,9 @@ AC_CHECK_HEADERS([stdlib.h errno.h string.h unistd.h getopt.h signal.h netinet/i
 AC_CHECK_FUNCS([memset])
 
 # Check xmlto for documentation
-if ! (which xmlto); then
-   AC_MSG_ERROR([did you install xmlto? (https://fedorahosted.org/xmlto/)], [1])
-fi
+# if ! (which xmlto); then
+#   AC_MSG_ERROR([did you install xmlto? (https://fedorahosted.org/xmlto/)], [1])
+# fi
 
 AC_CONFIG_FILES([Makefile
                  doc/Makefile
